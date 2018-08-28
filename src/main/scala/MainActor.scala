@@ -9,8 +9,8 @@ class MainActor extends Actor {
   }
   system.actorOf(Props[InfluxActor], "InfluxActor")
   system.actorSelection("user/InfluxActor") ! FirstMsg
-
 }
+
 object MainActor {
   case class Start()
 }
